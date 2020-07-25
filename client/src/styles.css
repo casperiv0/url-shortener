@@ -1,0 +1,160 @@
+@import url(//db.onlinewebfonts.com/c/9343496bb158886797785c1dfe92365f?family=SultanNahiaW20);
+
+:root {
+  --primary: #171717;
+  --secondary: #242426;
+  --form-input: #2a2a2c;
+  --border: #878788;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button:focus,
+a:focus,
+input:focus {
+  outline: 2px dotted var(--border);
+}
+
+body {
+  background-color: var(--primary);
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container form {
+  width: 500px;
+  max-width: 90%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  color: white;
+  border: 2px solid var(--border);
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #2a2a2c;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  color: white;
+  border: 2px solid var(--border);
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #2a2a2c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #b23849;
+  color: #ffffff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  padding: 10px;
+  border-radius: 5px;
+  width: 600px;
+  max-width: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: var(--secondary);
+  transition: 0.2s linear;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-body h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.copy-btn {
+  color: white;
+  border: 2px solid var(--border);
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #2a2a2c;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.modal-body a {
+  color: #bbbbbb;
+  margin-top: 10px;
+}
+
+._404-container {
+  width: 200px;
+  max-width: 90%;
+  text-align: center;
+}
+
+._404-container h1{
+  font-size: 6rem;
+}
+
+._404-container p {
+  margin-bottom: 20px;
+}
+
+._404-container a {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--secondary);
+  text-decoration: none;
+}

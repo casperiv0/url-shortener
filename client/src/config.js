@@ -1,0 +1,1 @@
+export const public_url = "http://localhost:3000"
