@@ -77,7 +77,7 @@ const SuccessModal = ({ url }) => {
 
   const copy = () => {
     window.navigator.clipboard
-      .writeText(`${public_url}/${url.slug}`)
+      .writeText(`${public_url}/#/${url.slug}`)
       .then(() => {
         document.querySelector('.copy-btn').textContent = 'Copied!';
       })
@@ -103,7 +103,7 @@ const SuccessModal = ({ url }) => {
         </button>
         <em>Or</em>
         <a
-          href={`${public_url}/${url.slug}`}>{`${public_url}/${url.slug}`}</a>
+          href={`${public_url}/#/${url.slug}`}>{`${public_url}/#/${url.slug}`}</a>
       </div>
     </div>
   );

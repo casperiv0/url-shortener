@@ -1,5 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/9343496bb158886797785c1dfe92365f?family=SultanNahiaW20);
-
 :root {
   --primary: #171717;
   --secondary: #242426;
@@ -22,6 +20,7 @@ input:focus {
 }
 
 body {
+  font-family: sans-serif;
   background-color: var(--primary);
   color: white;
 }
@@ -108,6 +107,7 @@ body {
 }
 
 .modal-body {
+  text-align: center;
   height: 100%;
   display: flex;
   align-items: center;
@@ -143,7 +143,7 @@ body {
   text-align: center;
 }
 
-._404-container h1{
+._404-container h1 {
   font-size: 6rem;
 }
 
