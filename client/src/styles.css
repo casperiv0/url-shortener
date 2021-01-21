@@ -2,7 +2,7 @@
   --primary: #171717;
   --secondary: #242426;
   --form-input: #2a2a2c;
-  --border: #878788;
+  --border: #4b4b4b;
 }
 
 *,
@@ -16,7 +16,8 @@
 button:focus,
 a:focus,
 input:focus {
-  outline: 2px dotted var(--border);
+  outline: none;
+  border-color: #fff;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   font-size: 1.2rem;
   background-color: #2a2a2c;
   border-radius: 5px;
+  transition: border 200ms;
 }
 
 .submit-btn {
@@ -69,6 +71,7 @@ body {
   font-size: 1.2rem;
   background-color: #b23849;
   color: #ffffff;
+  border-radius: 5px;
 }
 
 /* Modal */
