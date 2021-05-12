@@ -10,7 +10,7 @@ api.get("/slug/:slug", async (req, res) => {
 
   const url = await Url.findOne({ slug }).catch((e) => console.log(e));
 
-  if (!url) return res.json({ msg: "Not Found", status: "error" });
+  if (!url) return res.json({ msg: "Not Found", status: 204 });
 
   // update clicks
   url.clicks += 1;
@@ -27,7 +27,7 @@ api.post("/", async (req, res) => {
     // check if slug is already in use
     const url = await Url.findOne({ slug }).catch((e) => console.log(e));
     if (url) {
-      return res.json({ msg: "Slug is already in use!", status: "error" });
+      return res.json({ msg: "Slug is already in use!", status: 204 });
     }
 
     // create a slug if non was provided
@@ -40,11 +40,11 @@ api.post("/", async (req, res) => {
     newUrl
       .save()
       .then((url) => {
-        return res.json({ msg: "Added", status: "success", url });
+        return res.json({ msg: "Added", status: 200, url });
       })
       .catch((e) => console.log(e));
   } else {
-    return res.json({ msg: "Full URL is required!", status: "error" });
+    return res.json({ msg: "Full URL is required!", status: 204 });
   }
 });
 
