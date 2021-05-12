@@ -16,7 +16,7 @@ api.get("/slug/:slug", async (req, res) => {
   url.clicks += 1;
   url.save();
 
-  return res.json({ url, status: "success" });
+  return res.json({ url, status: 200 });
 });
 
 // /api/
